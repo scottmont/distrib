@@ -1,0 +1,1054 @@
+/* RESET =======================*/
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* GLOBAL =======================*/
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+    font-family: 'Oswald-Google', "Trebuchet MS", sans-serif;
+	font-size: 1.6rem;
+	text-rendering: optimizeLegibility;
+	color: black;
+	background-image: url("img/tile.png");
+}
+
+@font-face {
+	font-family: 'Oswald-Google';
+	font-style: normal;
+	font-weight: 400;
+	letter-spacing: -1px;
+	src: local("Oswald Medium"), url(http://fonts.gstatic.com/s/oswald/v10/qpy-UiLNKP-VfOdbcs6r6-vvDin1pK8aKteLpeZ5c0A.woff) format('woff');
+}
+
+input[type=radio], input[type=checkbox] {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+	visibility: hidden;
+}
+
+.wrapper {
+	width: 780px;
+	height: 100%;
+	margin: 0 auto;
+	margin-top: 20px;
+/*	padding: 10px 0px 0px 10px;*/
+/*	overflow: hidden;*/
+}
+
+.logo {
+/*	width: 770px;*/
+/*	height: 189px;*/
+/*	margin: 0 0 5px 0;*/
+/*	padding: 0;*/
+	clear: both;
+}
+
+
+/* TEXT FORMATTING =======================*/
+
+p, h2 {
+	width: 490px;
+	display: block;
+    font-weight: 100;
+	letter-spacing: 1px;
+	padding: 0px 10px 0px 10px;
+/*	margin-left: 10px;*/
+}
+
+h2 {
+	width: 490px;
+	font-size: 2.1rem;
+	padding-bottom: 10px;
+}
+
+p.show_p {	
+	
+	height: 109px;
+	font-size: 1.6rem;
+	overflow: hidden;
+	font-weight:10;
+/*	background-color: red;*/
+	-webkit-opacity: 1;
+	opacity: 1;
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	transition: 0.25s;
+/*	padding-right: 10px;*/
+/*	font-family: Tahoma;*/
+/*	letter-spacing: 0px;*/
+}
+
+/* LINK FORMATTING ==================================== */
+
+a:link, a:visited, a:hover {
+	color: black;
+	text-decoration: none;
+}
+
+/* LABELS & POSITIONING ==================================== */
+
+label, a {
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	transition: 0.25s;
+}
+
+/* OBJECT/IFRAME BUILDS ==================================== */
+
+object {
+/*	display: none;*/
+	position: relative;
+/*	top: 50%;*/
+/*	left: 50%;*/
+/*	transform: translateY(-50%);*/
+/*	transform: translateX(-50%);*/
+/*	top: 0;*/
+/*	left: 0;*/
+	margin: 0 auto;
+/*	height: 200px;*/
+/*	width: 200px;*/
+/*	background-color: green;*/
+/*	width: 1000px;*/
+/*	height: 1100px;*/
+	height: 100%;
+	width: 100%;
+}
+
+iframe {
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	height: 100%;
+	width: 100%;
+	border: none;
+}
+
+
+#browse_close_a {
+	position: fixed;
+	top: 20px;
+	right: 2%;
+/*	left: 50%;*/
+/*	-webkit-transform: translateX(-50%);*/
+/*	transform: translateX(-50%);*/
+	width: 120px;
+/*	padding-left: 840px;*/
+	height: 31px;
+	color: black;
+	text-align: center;
+	font-size: 2.0rem;
+	font-weight: 400;
+	background-color: #ffd70d;
+/*	float: none;*/
+	visibility: visible;
+	z-index: 30;
+}
+
+
+
+input[type=radio]#digital:checked ~ div#blackout, input[type=radio]#digital:checked ~ a > label#browse_close_a {
+	visibility: visible;
+	-webkit-opacity: 1.0;
+	opacity: 1.0;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	transition: 0.5s;
+}
+
+/*input[type=radio]#browse_all:checked ~ div > object, input[type=radio]#browse_all:checked ~ div > iframe {
+	display: block;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	transition: 0.5s;
+}*/
+
+/*input[type=radio]#browse_close_x:checked ~ div > object, input[type=radio]#browse_close_x:checked ~ div > iframe {
+	display: none;
+}*/
+
+
+
+#blackout {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color:black;
+	-webkit-opacity: 0;
+	opacity: 0;
+	-webkit-transition: 0.5s;
+	-moz-transition:  0.5s;
+	transition:  0.5s;
+	visibility: hidden;
+/*	visibility: visible;*/
+	z-index: 28;
+}
+
+#featured_blackout {
+	position: relative;
+	left: -260px;
+	top: -150px;
+	width: 770px;
+	height: 180px;
+	background-color:gray;
+	-webkit-opacity: 0;
+	opacity: 0;
+	-webkit-transition: 0.5s;
+	-moz-transition:  0.5s;
+	transition:  0.5s;
+	visibility: hidden;
+/*	display: none;*/
+/*	visibility: visible;*/
+	z-index: 28;
+}
+
+#digital, #screenings, #misc {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+/*	background-color:transparent;*/
+	-webkit-opacity: 0;
+	opacity: 0;
+	-webkit-transition: 0.5s;
+	-moz-transition:  0.5s;
+	transition:  0.5s;
+/*	visibility: hidden;*/
+	display: none;
+	z-index: 29;
+}
+
+/* ========== BLACKOUT toggle ==============*/
+
+/*#screenings:target ~ div#blackout, input[type=radio]#toggle-1:checked ~ div#blackout {
+   	visibility: visible;
+   	-webkit-opacity: 1.0;
+   	opacity: 1.0;
+   	-webkit-transition: 0.5s;
+   	-moz-transition: 0.5s;
+   	transition: 0.5s;
+}*/
+
+input[type=radio]#featured-3-1:checked ~ div#featured_blackout {
+   	visibility: visible;
+/*	display: block;*/
+   	-webkit-opacity: 1.0;
+   	opacity: 1.0;
+   	-webkit-transition: 0.5s;
+   	-moz-transition: 0.5s;
+   	transition: 0.5s;
+}
+
+
+
+#digital:target, #screenings:target, #misc:target {
+/*	visibility: visible;*/
+	display: block;
+	-webkit-opacity: 1.0;
+	opacity: 1.0;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	transition: 0.5s;
+	z-index: 30;
+}
+
+
+.cats, .cat_link, .cats_back, .mini_cat {    /* ====== Label tag as category --------------- */
+	position: relative;
+	width: 760px;
+	height: 50px;
+	display: block;
+	float: left;
+	cursor: pointer;
+	margin: 10px 0px 0px 0px;
+	padding: 0 0 0 10px;
+	z-index:10;
+	background-color: #ffd70d;
+	line-height: 50px;
+	font-size: 4.0rem;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	transition: 0.5s;
+}
+
+label.cats_back {   /* ------ Category close label tag --------------- */
+	position: absolute;
+	z-index: 11;
+	background-color: transparent;
+	visibility: hidden;
+}
+
+.mini_cat {     /* ------ Three mini categories under logo --------------- */
+	width: 250px;
+	margin: 0px 10px 0px 0px;
+	padding: 0;
+	text-align: center;
+	background-color: #757575;
+}
+
+
+label.show {     /* ------ Show thumbnail collapsed --------------- */
+	position: relative;
+	display: inline;
+	float: left;
+	text-transform: none;
+	width: 250px;
+	height: 180px;
+	margin: 0px 0px 0px 0px;
+	cursor: pointer;
+	background-color: transparent;
+	padding: 0px;
+	z-index: 5;
+	overflow: hidden;
+}
+
+label.show#show-4, label.show#show-5, label.show#show-6 {
+	margin-top: 10px;
+}
+
+/* ====== CATEGORY CLOSE LABEL VERTICAL OFFSET - 60px between categories =============*/
+
+label.cats_back {   /* ------ Make 225px with mini categories (digital/screening/misc) --------------- */
+	top: 148px;    
+}
+
+label.cats_back#cat_two {
+	-webkit-transform: translate(0,60px);
+	-moz-transform: translate(0,60px);
+	-ms-transform: translate(0,60px);
+	transform: translate(0,60px);
+}
+
+label.cats_back#cat_three {
+	-webkit-transform: translate(0,120px);
+	-moz-transform: translate(0,120px);
+	-ms-transform: translate(0,120px);
+	transform: translate(0,120px);
+}
+
+label.cats_back#cat_four {
+	-webkit-transform: translate(0,180px);
+	-moz-transform: translate(0,180px);
+	-ms-transform: translate(0,180px);
+	transform: translate(0,180px);
+}
+
+label.cats_back#cat_five {
+	-webkit-transform: translate(0,240px);
+	-moz-transform: translate(0,240px);
+	-ms-transform: translate(0,240px);
+	transform: translate(0,240px);
+}
+
+label.cats_back#cat_six {
+	-webkit-transform: translate(0,300px);
+	-moz-transform: translate(0,300px);
+	-ms-transform: translate(0,300px);
+	transform: translate(0,300px);
+}
+
+label.cats_back#cat_seven {
+	-webkit-transform: translate(0,360px);
+	-moz-transform: translate(0,360px);
+	-ms-transform: translate(0,360px);
+	transform: translate(0,360px);
+}
+
+
+label.cat_zero {    /* --------- Full page background back label  --------------- */
+	cursor: auto;
+	position: absolute;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	float: none;
+	background-color: transparent;
+}
+
+/* LABELS: HOVER STATES & BUTTON TRIGGERS  =======================*/
+
+label.cats:hover, #browse_close:hover, #browse_close_a:hover {
+	background-color: white;
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	transition: 0.25s;
+}
+
+label.header_cats:hover {
+	-webkit-opacity: 1;
+	opacity: 1;
+}
+
+a.cat_link:hover, .mini_cat:hover {
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	transition: 0.25s;
+	background-color: white;
+}
+
+/* IMAGE BRIGHTNESS HOVER =======================*/
+
+/*img {
+	filter:brightness(100%);
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	transition: 0.5s;
+}
+
+label > li > img:hover {
+	filter:brightness(120%);
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	transition: 0.5s;
+}*/
+
+/* Label horizontal expansion to reveal title and description -------------------------------------------*/
+
+input[type=radio].first:checked + label {
+	width: 770px;
+	-webkit-transition: width 0.5s;
+	-moz-transition: width 0.5s;
+	transition: width 0.5s;
+	z-index: 10;
+}
+
+/*input[type=radio].first:checked ~ div.popup#one,
+input[type=radio].second:checked ~ div.popup#two,
+input[type=radio].third:checked ~ div.popup#three,
+input[type=radio].first:checked ~ div.popup-row-2#one {
+	visibility: visible;
+	top: 10px;
+	left: 0px;
+	width: 770px;
+	height: 370px;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	transition: 0.5s;
+}*/
+
+/*input[type=radio].first:checked ~ label li img {
+	filter:blur(5px);
+	-webkit-opacity: 0.5;
+	opacity: 0.5;
+	-webkit-transition: 0.5s;
+	-moz-transition:  0.5s;
+	transition:  0.5s;
+}*/
+
+
+
+
+input[type=radio].second:checked + label {
+	width: 770px;
+	-webkit-transform: translate(-260px,0);
+	-moz-transform: translate(-260px,0);
+	-ms-transform: translate(-260px,0);
+	transform: translate(-260px,0);
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	transition: 0.5s;
+	z-index: 11;
+}
+
+input[type=radio].third:checked + label{
+	width: 770px;
+	-webkit-transform: translate(-520px,0);
+	-moz-transform: translate(-520px,0);
+	-ms-transform: translate(-520px,0);
+	transform: translate(-520px,0);
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	transition: 0.5s;
+	z-index: 12;
+}
+
+div.thumb_text {     /* Individual show container revealed by label mask -------------------------------------------*/
+	width: 770px;
+	height: 190px;
+	float: left;
+/*	overflow: hidden;*/
+}
+
+div.thumb_text#show_row_2 {
+		height: 380px;
+}
+
+/* Category Reveal/Close & Label BG change -------------------------------------------------*/
+
+div.full_cat {
+	position: relative;
+	width: 770px;
+	height: 0px;
+	float: left;
+	overflow: hidden;
+	-webkit-transition: height 0.5s;
+	-moz-transition: height 0.5s;
+	transition: height 0.5s;
+}
+
+/* CATEGORY 01 ------------------------------------------*/
+
+input[type=radio]:checked#toggle-1 ~ div.full_cat#cat_one {
+	height: 380px;
+/*	height: 190px;*/
+	-webkit-transition: height 0.25s;
+	-moz-transition: height 0.25s;
+	transition: height 0.25s;
+}
+
+input[type=radio]:checked#toggle-1 ~ label.cats_back#cat_one {
+	visibility: visible;
+}
+
+input[type=radio]:checked#toggle-1 + label {
+	background-color: white;
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	transition: 0.25s;
+}
+
+
+/* CATEGORY 02 ------------------------------------------*/
+
+input[type=radio]:checked#toggle-2 ~ div.full_cat#cat_two {
+	height: 190px;
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	transition: 0.25s;
+}
+
+input[type=radio]:checked#toggle-2 ~ label.cats_back#cat_two {
+	visibility: visible;
+}
+
+input[type=radio]:checked#toggle-2 + label {
+	background-color: white;
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	transition: 0.25s;
+}
+
+/* CATEGORY 03 ------------------------------------------*/
+
+input[type=radio]:checked#toggle-3 ~ div.full_cat#cat_three {
+/*	height: 380px;*/
+	height: 190px;
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	transition: 0.25s;
+}
+
+input[type=radio]:checked#toggle-3 ~ label.cats_back#cat_three {
+	visibility: visible;
+}
+
+input[type=radio]:checked#toggle-3 + label {
+	background-color: white;
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	transition: 0.25s;
+}
+
+/* CATEGORY 04 ------------------------------------------*/
+
+input[type=radio]:checked#toggle-4 ~ div.full_cat#cat_four {
+	height: 190px;
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	transition: 0.25s;
+}
+
+input[type=radio]:checked#toggle-4 ~ label.cats_back#cat_four {
+	visibility: visible;
+}
+
+input[type=radio]:checked#toggle-4 + label {
+	background-color: white;
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	transition: 0.25s;
+}
+
+/* CATEGORY 05 ------------------------------------------*/
+
+input[type=radio]:checked#toggle-5 ~ div.full_cat#cat_five {
+	height: 190px;
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	transition: 0.25s;
+}
+
+input[type=radio]:checked#toggle-5 ~ label.cats_back#cat_five {
+	visibility: visible;
+}
+
+input[type=radio]:checked#toggle-5 + label {
+	background-color: white;
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	transition: 0.25s;
+}
+
+/* CATEGORY 06 ------------------------------------------*/
+
+input[type=radio]:checked#toggle-6 ~ div.full_cat#cat_six {
+	height: 190px;
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	transition: 0.25s;
+}
+
+input[type=radio]:checked#toggle-6 ~ label.cats_back#cat_six {
+	visibility: visible;
+}
+
+input[type=radio]:checked#toggle-6 + label {
+	background-color: white;
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	transition: 0.25s;
+}
+
+/* CATEGORY 07 ------------------------------------------*/
+
+input[type=radio]:checked#toggle-7 ~ div.full_cat#cat_seven {
+	height: 190px;
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	transition: 0.25s;
+}
+
+input[type=radio]:checked#toggle-7 ~ label.cats_back#cat_seven {
+	visibility: visible;
+}
+
+input[type=radio]:checked#toggle-7 + label {
+	background-color: white;
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	transition: 0.25s;
+}
+
+input[type=radio]:checked ~ label {    /* Label vertical adjustment while opening categories --------------------------- */
+	-webkit-transform: translate (0,-425px);
+	-moz-transform: translate (0,-425px);
+	-ms-transform: translate (0,-425px);
+	transform: translate (0,-425px);
+}
+
+
+/* ====== LIST ITEM SETTINGS =============*/
+
+li.show_detail {
+	position: absolute;
+	color: white;
+	background-color: black;
+	width: 510px;
+	height: 180px;
+	margin: 0;
+}
+
+ol {
+	position: relative;
+	display: inline-block;
+	float: left;
+}
+
+li { 
+	margin: 0px 10px 0px 0px;
+	list-style-type: none;
+	display: inline;
+	float: left;
+}
+
+ol ol {
+	width: 770px;
+	height: 180px;
+	float: left;
+	padding-bottom: 10px;
+	-webkit-transition: width 0.5s;
+	-moz-transition: width 0.5s;
+	transition: width 0.5s;
+}
+
+/* Show label horizontal offset and vertical offset for additonal rows ----------------------------*/
+
+div.thumb_text {
+	position: absolute;
+}
+
+label#show-1 {
+	left: 0px;
+	top: 10px;
+}
+
+label#show-2 {
+	left: 260px;
+	top: 10px;
+}
+
+label#show-3 {
+	left: 520px;
+	top: 10px;
+}
+
+label#show-4 {
+	left: 0px;
+	top: 190px;
+}
+
+label#show-5 {
+	left: 260px;
+	top: 190px;
+}
+
+label#show-6 {
+	left: 520px;
+	top: 190px;
+}
+
+
+/* SHOW MENU AND BUTTONS ==================== */
+
+
+
+a li.watch_button, a li.watch_button_now, .featured_button, .all_button {
+/*	display: table-cell;*/
+	/*	vertical-align: middle;*/
+	color: black;
+	text-align: center;
+	font-size: 2.0rem;
+	font-weight: 500;
+	width: 100px;
+	height: 31px;
+	margin: 0;
+	margin-left: 10px;
+	float: left;
+	background-color: white;
+/*	background-color: #ffd70d;*/
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	transition: 0.25s;
+}
+
+a li.watch_button_now {
+	width: 130px;
+	background-color: #ffd70d;
+}
+
+.featured_button, .all_button {
+/*	position: absolute;*/
+/*	top: 149px;*/
+	width: 180px;
+/*	padding-left:10px;*/
+/*	margin-top: 10px;*/
+	background-color: #ffd70d;
+	text-align: center;
+	z-index: 31;
+}
+
+.all_button {
+	width: 140px;
+}
+
+a li.watch_button_number, a li.watch_button_year {
+	color: black;
+	text-align: center;
+	font-size: 2.0rem;
+	font-weight: 500;
+	width: 50px;
+	height: 31px;
+	margin: 0;
+	margin-left: 10px;
+	float: left;
+	background-color: #ffd70d;
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	transition: 0.25s;
+}
+
+a li.watch_button_year {
+	width: 70px;
+/*	background-color: white;*/
+}
+
+ol.show_menu {
+	width: 510px;
+	height: 31px;
+	border: 0px solid #ffd70d;
+	margin: 0;
+	padding: 0;
+	float: left;
+	display: block;
+}
+
+a:hover li.watch_button,
+a:hover li.watch_button_number,
+a:hover li.watch_button_now,
+a:hover li.watch_button_year,
+.featured_button:hover,
+.all_button:hover {
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	transition: 0.25s;
+	background-color: white;
+}
+
+
+p.featured_p {
+	position: relative;
+	display: inline-block;
+/*	top: -300px;*/
+	right: -510px;
+	top: -140px;
+	height: 109px;
+/*	color: black;*/
+	background-color: black;
+/*	font-size: 2.5rem;*/
+	-webkit-transition: 0.75s;
+	-moz-transition: 0.75s;
+	transition: 0.75s;
+/*	-webkit-transform: translate (0,0px);
+	-moz-transform: translate (0,0px);
+	-ms-transform: translate (0,0px);
+	transform: translate (0,0px);*/
+}
+
+p.blackout {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: inline-block;
+	height: 109px;
+	background-color: black;
+	-webkit-opacity: 0;
+	opacity: 0;
+	-webkit-transition: 2s;
+	-moz-transition: 2s;
+	transition: 2s;
+}
+
+a.featured_button:hover ~ p.blackout {
+	-webkit-opacity: 1;
+	opacity: 1;
+	-webkit-transition: 0.75s;
+	-moz-transition: 0.75s;
+	transition: 0.75s;
+}
+
+
+a.featured_button:hover ~ p.featured_p {
+/*	background-color: blue;*/
+/*	top: -140px;*/
+	right: 0px;
+/*	-webkit-transform: translate (0,-50px);
+	-moz-transform: translate (0,-50px);
+	-ms-transform: translate (0,-50px);
+	transform: translate (0,-50px);*/
+	-webkit-transition: 0.75s;
+	-moz-transition: 0.75s;
+	transition: 0.75s;
+}
+
+a.featured_button:hover ~ p.show_p {
+	background-color: blue;
+	-webkit-opacity: 0;
+	opacity: 0;
+	-webkit-transition: 0.75s;
+	-moz-transition: 0.75s;
+	transition: 0.75s;
+}
+
+.featured_thumbnail {
+	position: relative;
+	left: -510px;
+	top: -290px;
+	display: inline-block;
+	-webkit-transition: 0.75s;
+	-moz-transition: 0.75s;
+	transition: 0.75s;
+}
+
+a.featured_button:hover ~ img.featured_thumbnail {
+	left: -260px;
+	-webkit-transition: 0.75s;
+	-moz-transition: 0.75s;
+	transition: 0.75s;
+}
+
+div.thumbnail_blackout {
+	display: inline-block;
+	top: -41px;
+	left: -260px;
+	position: absolute;
+	width: 250px;
+	height: 180px;
+	background-color: black;
+	-webkit-opacity: 0;
+	opacity: 0;
+	-webkit-transition: 2s;
+	-moz-transition: 2s;
+	transition: 2;
+}
+
+
+a.featured_button:hover ~ div.thumbnail_blackout {
+	-webkit-opacity: 1;
+	opacity: 1;
+	-webkit-transition: 0.75s;
+	-moz-transition: 0.75s;
+	transition: 0.75s;
+}
+
+
+#back_label {     /*---- Frist row close/back label ------------- */
+	position: absolute;
+	top: 160px;
+/*	left: 735px;*/
+	left: 710px;
+	width: 60px;
+/*	width: 35px;*/
+	height: 31px;
+	color: black;
+/*	cursor: zoom-out;*/
+	text-align: center;
+	font-size: 2.0rem;
+	font-weight: 500;
+	background-color: gray;
+/*	background-color: #ffd70d;*/
+	-webkit-opacity: 0.0;
+	opacity: 0.0;
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	transition: 0.25s;
+	float: none;
+	visibility: hidden;
+	z-index: 20;
+}
+
+#back_label_2nd { /*---- Second row close/back label ------------- */
+	position: absolute;
+	top: 350px;
+	left: 710px;
+	width: 60px;
+/*	left: 735px;
+	width: 35px;*/
+	height: 31px;
+	color: black;
+/*	cursor: zoom-out;*/
+	text-align: center;
+	font-size: 2.0rem;
+	font-weight: 600;
+	background-color: gray;
+	-webkit-opacity: 0.0;
+	opacity: 0.0;
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	transition: 0.25s;
+	float: none;
+	visibility: hidden;
+	z-index: 20;
+}
+
+#back_label:hover, #back_label_2nd:hover {
+	background-color: white;
+	color: black;
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	transition: 0.25s;
+}
+
+
+/*---- Individual show close/back label trigger ------------- */
+
+input[type=radio]:checked#show-1-1 ~ label#back_label,
+input[type=radio]:checked#show-1-2 ~ label#back_label,
+input[type=radio]:checked#show-1-3 ~ label#back_label,
+input[type=radio]:checked#show-1-4 ~ label#back_label_2nd,
+input[type=radio]:checked#show-2-1 ~ label#back_label,
+input[type=radio]:checked#show-2-2 ~ label#back_label,
+input[type=radio]:checked#show-2-3 ~ label#back_label,
+input[type=radio]:checked#show-3-1 ~ label#back_label,
+input[type=radio]:checked#show-3-2 ~ label#back_label,
+input[type=radio]:checked#show-3-3 ~ label#back_label,
+input[type=radio]:checked#show-3-4 ~ label#back_label_2nd,
+input[type=radio]:checked#show-3-5 ~ label#back_label_2nd,
+input[type=radio]:checked#show-4-1 ~ label#back_label,
+input[type=radio]:checked#show-4-2 ~ label#back_label,
+input[type=radio]:checked#show-4-3 ~ label#back_label,
+input[type=radio]:checked#show-5-1 ~ label#back_label,
+input[type=radio]:checked#show-5-2 ~ label#back_label,
+input[type=radio]:checked#show-5-3 ~ label#back_label,
+input[type=radio]:checked#show-6-1 ~ label#back_label,
+input[type=radio]:checked#show-6-2 ~ label#back_label,
+input[type=radio]:checked#show-6-3 ~ label#back_label,
+input[type=radio]:checked#show-7-1 ~ label#back_label,
+input[type=radio]:checked#show-7-2 ~ label#back_label,
+input[type=radio]:checked#show-7-3 ~ label#back_label,
+input[type=radio]:checked#show-8-1 ~ label#back_label,
+input[type=radio]:checked#show-8-2 ~ label#back_label {
+	-webkit-opacity: 1;
+	opacity: 1;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	transition: 0.5s;
+	visibility: visible;
+}
+
+.footer {
+	width: 770px;
+	height: 45px;
+	font-size: 1.6rem;
+	text-height: 40px;
+	color: black;
+	margin: auto 0;
+	margin-bottom: 150px;
+	padding: 0;
+	border: 0;
+	background-color:transparent;
+	text-align: left;
+	float: left;
+}
+
+.footer img {
+	float: right;
+	margin-top: 20px;
+}
